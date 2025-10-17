@@ -1,0 +1,66 @@
+.VSCodeCounter
+.specs
+.idea
+.ipynb_checkpoints
+.mypy_cache
+__pycache__
+api.egg-info
+.pytest_cache
+htmlcov
+dist
+site
+.coverage*
+coverage.xml
+.netlify
+test.db
+log.txt
+Pipfile
+Pipfile.lock
+env3.*
+env
+docs_build
+site_build
+venv
+.venv
+docs.zip
+archive.zip
+
+# vim temporary files
+*~
+.*.sw?
+.cache
+
+# macOS
+.DS_Store
+
+# Security - Never commit private keys
+private_key.pem
+*.key
+*.pem
+!jwks.json  # Public keys are OK
+
+.env
+.env.test
+*.egg-info/
+*.egg
+
+# Cursor IDE
+.cursor/
+cursor/
+*.cursor/
+
+# Specific egg-info directories
+cloudfunction.egg-info/
+cloudrun.egg-info/
+
+.vscode
+apigee-deployment
+
+# Only use uv.lock in the root directory and nowhere else
+**/uv.lock
+!/uv.lock
+
+# Build artifacts
+**/build
+package
+dist.zip

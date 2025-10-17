@@ -1,0 +1,40 @@
+[project]
+name = "audiohook-sip-bridge"
+version = "0.2.1"
+description = "AudioHook ↔ SIP bridge with PCMU and SIP (pyVoIP) and SIPS (TLS) support"
+requires-python = ">=3.13"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Boosted", email = "eng@getboosted.io" }]
+
+dependencies = [
+    "aiohttp>=3.13.1",
+    "websockets>=15.0",
+    "uvloop>=0.22.1; platform_system != 'Windows'",
+    "prometheus-client>=0.20",
+    "attrs>=24.2",
+    "pylibsrtp>=1.0.0",
+    "pyVoIP>=1.6.8",
+    "wheel>=0.45.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2"
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Package discovery limited to the collapsed audiohooksipbridge namespace
+
+[tool.setuptools.packages.find]
+include = ["audiohooksipbridge"]
+exclude = ["tests", "examples"]
